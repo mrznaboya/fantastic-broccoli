@@ -5,18 +5,20 @@ import SearchScreen from "./src/screens/SearchScreen";
 
 const Stack = createStackNavigator();
 
-function MyStack() {
+const MyStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Business Search" component={SearchScreen} />
     </Stack.Navigator>
   );
-}
+};
 
-export default function App() {
+const App = () => {
   return (
     <NavigationContainer>
       <MyStack />
     </NavigationContainer>
   );
-}
+};
+
+export default App;
