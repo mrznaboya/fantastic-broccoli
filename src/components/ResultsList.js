@@ -8,8 +8,10 @@ import {
 } from "react-native";
 import ResultsDetail from "./ResultsDetail";
 import ResultsShowScreen from "../screens/ResultsShowScreen";
+import { useNavigation } from "@react-navigation/native";
 
-const ResultsList = ({ title, results, navigation }) => {
+const ResultsList = ({ title, results }) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.titleStyle}>{title}</Text>
@@ -21,7 +23,7 @@ const ResultsList = ({ title, results, navigation }) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
-              onPress={() => navigation.navigate(ResultsShowScreen)}
+              onPress={() => navigation.navigate("Results Show")}
             >
               <ResultsDetail result={item} />
             </TouchableOpacity>

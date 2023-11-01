@@ -3,10 +3,13 @@ import { View, Text, StyleSheet, ScrollView } from "react-native";
 import SearchBar from "../components/SearchBar";
 import useResults from "../hooks/useResults";
 import ResultsList from "../components/ResultsList";
+import { useNavigation } from "@react-navigation/native";
 
-const SearchScreen = ({ navigation }) => {
+const SearchScreen = () => {
+  // console.log(navigation);
   const [term, setTerm] = useState("");
   const [searchApi, results, errorMessage] = useResults();
+  const navigation = useNavigation();
 
   const filterResultsByPrice = (price) => {
     // price == '$' || '$$' || '$$$'
