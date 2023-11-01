@@ -9,7 +9,7 @@ const ResultsShowScreen = () => {
   // console.log(id);
   const [result, setResult] = useState(null);
 
-  console.log(result);
+  // console.log(result);
 
   // Helper function
   const getResult = async (id) => {
@@ -23,8 +23,8 @@ const ResultsShowScreen = () => {
   if (!result) return null;
 
   return (
-    <View>
-      <Text>{result.name}</Text>
+    <View style={styles.container}>
+      <Text style={styles.textStyle}>{result.name}</Text>
       <FlatList
         data={result.photos}
         keyExtractor={(photo) => photo}
@@ -40,6 +40,16 @@ const styles = StyleSheet.create({
   image: {
     height: 200,
     width: 300,
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  textStyle: {
+    fontSize: 15,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+  container: {
+    marginLeft: 15,
   },
 });
 
