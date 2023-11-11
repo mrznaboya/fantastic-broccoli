@@ -2,9 +2,7 @@
 
 Hey, my dudes! I'm learning how to make a restaurant search app.
 
-I have ignored yelp.js in my api folder for security purposes so please supply your own APIs.
-
-create src/api folder and then yelp.js
+Please supply your own API key in src/api/yelp.js
 
 ```
 import axios from "axios";
